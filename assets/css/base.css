@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #6319A9;
+    --second-color: #1280BE;
+    --text-color: #C8C8DC;
+    --nav-color: #F2F2F2;
+    --background-color: #030326;
+    --ntf-color: #8A2BE2;
+    --bg-brand-color: #03022e;
+    --text-blur-color: rgba(200, 200, 220, 0.6);
+    --highlightbg-purple-color: rgba(138, 43, 226, 0.28);
+    --highlightbg-blue-color: rgba(18, 128, 190, 0.38);
+    --border-item-color: rgba(200, 200, 220, 0.38);
+    --form-label-color: #ADADAD;
+    --close-color: rgba(255, 0, 0, 0.628);
+    --white-color: #fff;
+    --increase-color: #76BB68;
+    --decrease-color: #C32914;
+}
+
+/* Reset css */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* height: 100vh; */
+    background-color: var(--background-color);
+    color: var(--text-color); 
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+
+/* button style */
+.btn {
+    min-width: 13rem;
+    /* height: 5.5rem; */
+    line-height: 5.5rem; 
+    /* padding: 0 2.4rem; */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Started */
+.btn.btn__started {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    min-width: 21rem;
+}
+
+.btn__started .btn__link {
+    padding: 1.7rem 2.4rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    width: 100%;
+    height: 100%;
+}
+
+.btn__started:hover {
+    background: linear-gradient(45deg, var(--primary-color) 10%, var(--second-color));
+}
+
+.btn__started:hover .btn__link {
+    color: var(--text-color);
+}
+
+/* Button size L */
+.btn.btn-size-l {
+    position: relative;
+    min-width: 237px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 2.6rem;
+    display: block;
+    margin: 6.3rem auto;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+}
+
+.btn.btn-size-l:hover {
+    background-color: rgb(119, 58, 177);
+}
+
+.btn-size-l .btn-size-l--link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 2.4rem;
+
+}
+
+.form-btn::after,
+.form-btn::before,
+.product__btn::after,
+.product__btn::before,
+.collections__btn::after,
+.collections__btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.05;
+    z-index: -1;
+    transition: all .4s cubic-bezier(.165, .84, .44, 1);
+}
+
+.form-btn:hover::after,
+.form-btn:hover::before,
+.product__btn:hover::after,
+.product__btn:hover::before,
+.collections__btn:hover::after,
+.collections__btn:hover::before {
+    left: auto;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Button marketplace */
+.btn.marketplace__btn {
+    min-width: 237px;
+    padding: 0 2.3rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    transition: all ease .3s;
+}
+
+.marketplace__btn:hover {
+    background-color: var(--primary-color);
+}
+
+.marketplace__btn .marketplace__btn-link {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1.5rem 0;
+}

@@ -1,0 +1,273 @@
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem;
+}
+
+.sign-up-block {
+    max-width: 1300px;
+    width: 100%;
+    height: 850px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    background-color: #0C172C;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.sign-up-left {
+    width: 50%;
+    height: 100%;
+}
+
+.sign-up-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sign-up-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 50px 50px 20px 50px;
+}
+
+.sign-up-heading {
+    font-weight: 700;
+    font-size: 3.3rem;
+    line-height: 4.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.09em;
+}
+
+.sign-up-title {
+    margin: 1.8rem 0 0 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: var(--text-color);
+}
+
+.box-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3.2rem;
+    transition: all ease .3s;
+}
+
+.box-icon a {
+    padding: 1.1rem;
+}
+
+.box-icon i {
+    color: #666;
+    transition: all ease .3s;
+}
+
+.box-icon:hover {
+    background-color: var(--close-color);
+}
+
+.box-icon:hover i {
+    color: var(--white-color);
+}
+
+/* form */
+#form-1 {
+    margin-top: 3rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2.2rem;
+}
+
+.form-label {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--form-label-color);
+}
+
+.form-control {
+    padding: 0.8rem 0 1.1rem 0;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #595959;
+}
+
+.form-message {
+    padding: 3px 0;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.form-label,
+.form-message {
+    text-align: left;
+}
+
+.form-checkbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.fomr-checkbox-text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+.form-btn {
+    position: relative;
+    width: 100%;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 1.5rem 4rem;
+    outline: none;
+    border: none;
+    margin-top: 1.6rem;
+    overflow: hidden;
+}
+
+.form-info {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    height: 2.4rem;
+    margin: 2rem 0 0 0;
+}
+
+.form-info a {
+    text-decoration: none;
+}
+
+.form-info a:hover {
+    text-decoration: underline;
+}
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+/* toast */
+#toast {
+    position: fixed;
+    top: 5rem;
+    right: 3.2rem;
+    z-index: 99;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 1.5rem 0;
+    min-width: 40rem;
+    max-width: 45rem;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s linear;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast+.toast {
+    margin-top: 24px;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.toast__close:hover {
+    opacity: 0.7;
+}
+
+.toast--success {
+    border-color: #47d864;
+}
+
+.toast--success .toast__icon {
+    color: #47d864;
+}
+
+.toast--error {
+    border-color: #dd4747;
+}
+
+.toast--error .toast__icon {
+    color: #dd4747;
+}
